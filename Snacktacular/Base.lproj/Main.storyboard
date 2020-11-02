@@ -235,6 +235,9 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nUp-jk-g0C">
+                                        <rect key="frame" x="0.0" y="62" width="375" height="180"/>
+                                    </mapView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -242,7 +245,11 @@
                                     <constraint firstItem="4ql-dc-wmh" firstAttribute="leading" secondItem="Ola-vS-XzK" secondAttribute="leading" id="7KH-a0-Ik4"/>
                                     <constraint firstItem="UhZ-Pj-x1o" firstAttribute="leading" secondItem="pTa-pu-I91" secondAttribute="trailing" constant="8" id="9ho-SV-OfB"/>
                                     <constraint firstItem="4ql-dc-wmh" firstAttribute="top" secondItem="3qO-bs-cNY" secondAttribute="bottom" constant="2" id="Cu9-sX-a5w"/>
+                                    <constraint firstItem="nUp-jk-g0C" firstAttribute="leading" secondItem="XMu-qi-ey3" secondAttribute="leading" id="DB6-ME-gep"/>
                                     <constraint firstItem="4ql-dc-wmh" firstAttribute="leading" secondItem="3qO-bs-cNY" secondAttribute="leading" id="EER-zz-FmP"/>
+                                    <constraint firstItem="ZrI-T6-76w" firstAttribute="top" secondItem="nUp-jk-g0C" secondAttribute="bottom" id="QG2-s8-Xdi"/>
+                                    <constraint firstAttribute="trailing" secondItem="nUp-jk-g0C" secondAttribute="trailing" id="R3m-hc-mwP"/>
+                                    <constraint firstItem="nUp-jk-g0C" firstAttribute="top" secondItem="4ql-dc-wmh" secondAttribute="bottom" constant="2" id="X4r-hD-nPa"/>
                                     <constraint firstItem="ZrI-T6-76w" firstAttribute="top" secondItem="4ql-dc-wmh" secondAttribute="bottom" constant="182" id="bmB-RU-zoH"/>
                                     <constraint firstItem="NXn-fk-JGk" firstAttribute="top" secondItem="ZrI-T6-76w" secondAttribute="bottom" constant="6" id="fk8-RV-Ju5"/>
                                     <constraint firstItem="4ql-dc-wmh" firstAttribute="trailing" secondItem="3qO-bs-cNY" secondAttribute="trailing" id="hod-Jw-vAV"/>
@@ -291,6 +298,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addressTextField" destination="4ql-dc-wmh" id="JUn-vM-nto"/>
+                        <outlet property="mapView" destination="nUp-jk-g0C" id="ZHk-AJ-jCO"/>
                         <outlet property="nameTextField" destination="3qO-bs-cNY" id="vHw-0Y-zgk"/>
                         <outlet property="ratingLabel" destination="NXn-fk-JGk" id="BsZ-Ep-tK1"/>
                     </connections>
