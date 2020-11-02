@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GooglePlaces
 
 class SpotDetailViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
@@ -58,4 +59,45 @@ class SpotDetailViewController: UIViewController {
         leaveViewController()
     }
     
+    @IBAction func lookupButtonPressed(_ sender: UIBarButtonItem) {
+        let autocompleteController = GMSAutocompleteViewController()
+           autocompleteController.delegate = self
+        // Display the autocomplete view controller.
+        present(autocompleteController, animated: true, completion: nil)
+    }
+}
+
+extension SpotDetailViewController: GMSAutocompleteViewControllerDelegate {
+
+  // Handle the user's selection.
+  func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+    print("Place name: \(place.name)")
+    print("Place ID: \(place.placeID)")
+    print("Place attributions: \(place.attributions)")
+    spot.name = place.name ?? "Unknown Place"
+    spot.address = place.formattedAddress ?? "Unknown Address"
+    print("Coordinates = \(place.coordinate)")
+    updateUserInterface()
+    dismiss(animated: true, completion: nil)
+  }
+
+  func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+    // TODO: handle the error.
+    print("Error: ", error.localizedDescription)
+  }
+
+  // User canceled the operation.
+  func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+    dismiss(animated: true, completion: nil)
+  }
+
+  // Turn the network activity indicator on and off again.
+  func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+    UIApplication.shared.isNetworkActivityIndicatorVisible = true
+  }
+
+  func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+    UIApplication.shared.isNetworkActivityIndicatorVisible = false
+  }
+
 }

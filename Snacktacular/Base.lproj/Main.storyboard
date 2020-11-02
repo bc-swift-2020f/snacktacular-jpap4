@@ -270,7 +270,11 @@
                     </view>
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Vq1-sh-E7z"/>
-                        <barButtonItem title="Lookup Place" id="AmU-oL-Zfv"/>
+                        <barButtonItem title="Lookup Place" id="AmU-oL-Zfv">
+                            <connections>
+                                <action selector="lookupButtonPressed:" destination="YOz-I1-93I" id="5XN-a2-bCw"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="yY3-bo-JSi">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="IGu-cC-53n">
