@@ -92,7 +92,7 @@
                                         <connections>
                                             <outlet property="distanceLabel" destination="DcS-CY-ARO" id="Lmw-NN-Prq"/>
                                             <outlet property="nameLabel" destination="F0N-Br-P7H" id="nCS-Rc-RkN"/>
-                                            <outlet property="ratinglabel" destination="Nfs-Pk-M7u" id="WM9-kT-Syy"/>
+                                            <outlet property="ratingLabel" destination="Nfs-Pk-M7u" id="WM9-kT-Syy"/>
                                             <segue destination="YOz-I1-93I" kind="show" identifier="ShowDetail" id="Zt9-38-ZbR"/>
                                         </connections>
                                     </tableViewCell>
