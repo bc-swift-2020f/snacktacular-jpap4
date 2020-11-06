@@ -21,7 +21,7 @@ class SpotDetailViewController: UIViewController {
     var spot: Spot!
     let regionDistance: CLLocationDegrees = 750.0
     var locationManager: CLLocationManager!
-    var reviews: [String] = ["Tasty", "Awful", "Tasty", "Awful", "Tasty", "Awful"]
+    var reviews: [String] = ["Tasty", "Awful", "Tasty", "Awful", "Tasty", "Awful", "Tasty", "Awful", "Tasty", "Awful", "Tasty", "Awful"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
