@@ -178,8 +178,8 @@ extension SpotDetailViewController: CLLocationManagerDelegate {
                 self.spot.address = address
                 self.spot.coordinate = currentLocation.coordinate
             }
-            self.mapView.userLocation.title = locationName
-            self.mapView.userLocation.subtitle = address
+            self.mapView.userLocation.title = name
+            self.mapView.userLocation.subtitle = address.replacingOccurrences(of: "\n", with: ", ")
             self.updateUserInterface()
         }
     }
