@@ -19,6 +19,8 @@
 		8E089A4925507B19002A4A30 /* Spots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E089A4825507B19002A4A30 /* Spots.swift */; };
 		8E089A4B2550902C002A4A30 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E089A4A2550902C002A4A30 /* APIKeys.swift */; };
 		8E74C172255860EF00A169C2 /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E74C171255860EF00A169C2 /* ReviewTableViewController.swift */; };
+		8E74C17425586F2300A169C2 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E74C17325586F2300A169C2 /* Review.swift */; };
+		8E74C176255874CE00A169C2 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E74C175255874CE00A169C2 /* Reviews.swift */; };
 		8EEBE7BA254F681000BBF8B9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EEBE7B9254F681000BBF8B9 /* GoogleService-Info.plist */; };
 		8EEBE7BC254F7C1D00BBF8B9 /* SpotListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEBE7BB254F7C1D00BBF8B9 /* SpotListViewController.swift */; };
 		8EEBE7BE254F7DE400BBF8B9 /* SpotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEBE7BD254F7DE400BBF8B9 /* SpotTableViewCell.swift */; };
@@ -40,6 +42,8 @@
 		8E089A4825507B19002A4A30 /* Spots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spots.swift; sourceTree = "<group>"; };
 		8E089A4A2550902C002A4A30 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		8E74C171255860EF00A169C2 /* ReviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
+		8E74C17325586F2300A169C2 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		8E74C175255874CE00A169C2 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
 		8EEBE7B9254F681000BBF8B9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		8EEBE7BB254F7C1D00BBF8B9 /* SpotListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotListViewController.swift; sourceTree = "<group>"; };
 		8EEBE7BD254F7DE400BBF8B9 /* SpotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotTableViewCell.swift; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 				8E086F3E254F640E00140DB4 /* SceneDelegate.swift */,
 				8E089A4425506862002A4A30 /* Spot.swift */,
 				8E089A4825507B19002A4A30 /* Spots.swift */,
+				8E74C17325586F2300A169C2 /* Review.swift */,
+				8E74C175255874CE00A169C2 /* Reviews.swift */,
 				8E086F40254F640E00140DB4 /* LoginViewController.swift */,
 				8EEBE7BB254F7C1D00BBF8B9 /* SpotListViewController.swift */,
 				8EEBE7BD254F7DE400BBF8B9 /* SpotTableViewCell.swift */,
@@ -252,11 +258,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E74C176255874CE00A169C2 /* Reviews.swift in Sources */,
 				8EEBE7BC254F7C1D00BBF8B9 /* SpotListViewController.swift in Sources */,
 				8E086F41254F640E00140DB4 /* LoginViewController.swift in Sources */,
 				8E086F3D254F640E00140DB4 /* AppDelegate.swift in Sources */,
 				8EEBE7C0254F838D00BBF8B9 /* SpotDetailViewController.swift in Sources */,
 				8E74C172255860EF00A169C2 /* ReviewTableViewController.swift in Sources */,
+				8E74C17425586F2300A169C2 /* Review.swift in Sources */,
 				8E089A4925507B19002A4A30 /* Spots.swift in Sources */,
 				8EEBE7BE254F7DE400BBF8B9 /* SpotTableViewCell.swift in Sources */,
 				8E089A4B2550902C002A4A30 /* APIKeys.swift in Sources */,
