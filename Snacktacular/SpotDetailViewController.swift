@@ -45,7 +45,7 @@ class SpotDetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         reviews.loadData(spot: spot) {
-            self.tableView.reloadData()
+            self.tablewView.reloadData()
         }
     }
     
@@ -88,6 +88,19 @@ class SpotDetailViewController: UIViewController {
         }
     }
     
+    func saveCancelAlert(title: String, message: String, sequeIdentifier: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let saveAction = UIAlertAction(title: "Save", style: .default) { (_) in
+            self.spot.saveData { (sucess) in
+                self.performSegue(withIdentifier: sequeIdentifier, sender: nil)
+            }
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion:  nil)
+    }
+    
     func leaveViewController() {
         let isPresentingInAddMode = presentingViewController is UINavigationController
         if isPresentingInAddMode {
@@ -120,6 +133,11 @@ class SpotDetailViewController: UIViewController {
     }
     
     @IBAction func ratingButtonPressed(_ sender: UIButton) {
+        if spot.documentID == "" {
+            saveCancelAlert(title: "This venue has not been saved.", message: "You must save this venue before you can review it", sequeIdentifier: "AddReview")
+        } else {
+            
+        }
         performSegue(withIdentifier: "AddReview", sender: nil)
     }
     
