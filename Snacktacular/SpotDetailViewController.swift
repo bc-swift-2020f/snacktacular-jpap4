@@ -100,6 +100,13 @@ class SpotDetailViewController: UIViewController {
             let selectedIndexPath = tablewView.indexPathForSelectedRow!
             destination.review = reviews.reviewArray[selectedIndexPath.row]
             destination.spot = spot
+        case "AddPhoto":
+            let navigationController = segue.destination as! UINavigationController
+            let destination = navigationController.viewControllers.first as! PhotoViewController
+            destination.spot = spot
+        case "ShowPhoto":
+            let destination = segue.destination as! PhotoViewController
+            destination.spot = spot
         default:
             print("couldnt find a case")
         }
@@ -158,7 +165,7 @@ class SpotDetailViewController: UIViewController {
     
     @IBAction func lookupButtonPressed(_ sender: UIBarButtonItem) {
         let autocompleteController = GMSAutocompleteViewController()
-           autocompleteController.delegate = self
+        autocompleteController.delegate = self
         // Display the autocomplete view controller.
         present(autocompleteController, animated: true, completion: nil)
     }
@@ -172,30 +179,40 @@ class SpotDetailViewController: UIViewController {
         performSegue(withIdentifier: "AddReview", sender: nil)
     }
     
+    
+    @IBAction func photoButtonPressed(_ sender: UIButton) {
+        if spot.documentID == "" {
+            saveCancelAlert(title: "This venue has not been saved.", message: "You must save this venue before you can review it", sequeIdentifier: "AddPhoto")
+        } else {
+            
+        }
+        performSegue(withIdentifier: "AddPhoto", sender: nil)
+    }
+    
 }
 
 extension SpotDetailViewController: GMSAutocompleteViewControllerDelegate {
-
-  // Handle the user's selection.
-  func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-    spot.name = place.name ?? "Unknown Place"
-    spot.address = place.formattedAddress ?? "Unknown Address"
-    spot.coordinate = place.coordinate
-    updateUserInterface()
-    dismiss(animated: true, completion: nil)
-  }
-
-  func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
-    // TODO: handle the error.
-    print("Error: ", error.localizedDescription)
-  }
-
-  // User canceled the operation.
-  func wasCancelled(_ viewController: GMSAutocompleteViewController) {
-    dismiss(animated: true, completion: nil)
-  }
-
-
+    
+    // Handle the user's selection.
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+        spot.name = place.name ?? "Unknown Place"
+        spot.address = place.formattedAddress ?? "Unknown Address"
+        spot.coordinate = place.coordinate
+        updateUserInterface()
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+        // TODO: handle the error.
+        print("Error: ", error.localizedDescription)
+    }
+    
+    // User canceled the operation.
+    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
 }
 
 extension SpotDetailViewController: CLLocationManagerDelegate {
