@@ -18,6 +18,8 @@
 		8E089A472550731D002A4A30 /* UIViewController+alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E089A462550731D002A4A30 /* UIViewController+alert.swift */; };
 		8E089A4925507B19002A4A30 /* Spots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E089A4825507B19002A4A30 /* Spots.swift */; };
 		8E089A4B2550902C002A4A30 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E089A4A2550902C002A4A30 /* APIKeys.swift */; };
+		8E3D8EDD255C8677002830F9 /* UIView+addBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D8EDC255C8677002830F9 /* UIView+addBorder.swift */; };
+		8E3D8EDF255C8741002830F9 /* UIBarButtonItem+hide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D8EDE255C8741002830F9 /* UIBarButtonItem+hide.swift */; };
 		8E74C172255860EF00A169C2 /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E74C171255860EF00A169C2 /* ReviewTableViewController.swift */; };
 		8E74C17425586F2300A169C2 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E74C17325586F2300A169C2 /* Review.swift */; };
 		8E74C176255874CE00A169C2 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E74C175255874CE00A169C2 /* Reviews.swift */; };
@@ -42,6 +44,8 @@
 		8E089A462550731D002A4A30 /* UIViewController+alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+alert.swift"; sourceTree = "<group>"; };
 		8E089A4825507B19002A4A30 /* Spots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spots.swift; sourceTree = "<group>"; };
 		8E089A4A2550902C002A4A30 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		8E3D8EDC255C8677002830F9 /* UIView+addBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addBorder.swift"; sourceTree = "<group>"; };
+		8E3D8EDE255C8741002830F9 /* UIBarButtonItem+hide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+hide.swift"; sourceTree = "<group>"; };
 		8E74C171255860EF00A169C2 /* ReviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
 		8E74C17325586F2300A169C2 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		8E74C175255874CE00A169C2 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 				8E74C1772558867300A169C2 /* SpotReviewTableViewCell.swift */,
 				8E74C171255860EF00A169C2 /* ReviewTableViewController.swift */,
 				8E089A462550731D002A4A30 /* UIViewController+alert.swift */,
+				8E3D8EDC255C8677002830F9 /* UIView+addBorder.swift */,
+				8E3D8EDE255C8741002830F9 /* UIBarButtonItem+hide.swift */,
 				8E089A4A2550902C002A4A30 /* APIKeys.swift */,
 				8E086F42254F640E00140DB4 /* Main.storyboard */,
 				8E086F45254F640F00140DB4 /* Assets.xcassets */,
@@ -269,12 +275,14 @@
 				8E74C172255860EF00A169C2 /* ReviewTableViewController.swift in Sources */,
 				8E74C17425586F2300A169C2 /* Review.swift in Sources */,
 				8E089A4925507B19002A4A30 /* Spots.swift in Sources */,
+				8E3D8EDF255C8741002830F9 /* UIBarButtonItem+hide.swift in Sources */,
 				8EEBE7BE254F7DE400BBF8B9 /* SpotTableViewCell.swift in Sources */,
 				8E74C1782558867300A169C2 /* SpotReviewTableViewCell.swift in Sources */,
 				8E089A4B2550902C002A4A30 /* APIKeys.swift in Sources */,
 				8E089A4525506862002A4A30 /* Spot.swift in Sources */,
 				8E086F3F254F640E00140DB4 /* SceneDelegate.swift in Sources */,
 				8E089A472550731D002A4A30 /* UIViewController+alert.swift in Sources */,
+				8E3D8EDD255C8677002830F9 /* UIView+addBorder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
