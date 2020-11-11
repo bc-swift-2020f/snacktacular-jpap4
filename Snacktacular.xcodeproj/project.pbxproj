@@ -21,6 +21,7 @@
 		8E3D8EDD255C8677002830F9 /* UIView+addBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D8EDC255C8677002830F9 /* UIView+addBorder.swift */; };
 		8E3D8EDF255C8741002830F9 /* UIBarButtonItem+hide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D8EDE255C8741002830F9 /* UIBarButtonItem+hide.swift */; };
 		8E3D8EE1255C9D2E002830F9 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D8EE0255C9D2E002830F9 /* PhotoViewController.swift */; };
+		8E3D8EE3255CA4B8002830F9 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D8EE2255CA4B8002830F9 /* Photo.swift */; };
 		8E74C172255860EF00A169C2 /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E74C171255860EF00A169C2 /* ReviewTableViewController.swift */; };
 		8E74C17425586F2300A169C2 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E74C17325586F2300A169C2 /* Review.swift */; };
 		8E74C176255874CE00A169C2 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E74C175255874CE00A169C2 /* Reviews.swift */; };
@@ -48,6 +49,7 @@
 		8E3D8EDC255C8677002830F9 /* UIView+addBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addBorder.swift"; sourceTree = "<group>"; };
 		8E3D8EDE255C8741002830F9 /* UIBarButtonItem+hide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+hide.swift"; sourceTree = "<group>"; };
 		8E3D8EE0255C9D2E002830F9 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		8E3D8EE2255CA4B8002830F9 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		8E74C171255860EF00A169C2 /* ReviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
 		8E74C17325586F2300A169C2 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		8E74C175255874CE00A169C2 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				8E089A4825507B19002A4A30 /* Spots.swift */,
 				8E74C17325586F2300A169C2 /* Review.swift */,
 				8E74C175255874CE00A169C2 /* Reviews.swift */,
+				8E3D8EE2255CA4B8002830F9 /* Photo.swift */,
 				8E086F40254F640E00140DB4 /* LoginViewController.swift */,
 				8EEBE7BB254F7C1D00BBF8B9 /* SpotListViewController.swift */,
 				8EEBE7BD254F7DE400BBF8B9 /* SpotTableViewCell.swift */,
@@ -282,6 +285,7 @@
 				8EEBE7BE254F7DE400BBF8B9 /* SpotTableViewCell.swift in Sources */,
 				8E3D8EE1255C9D2E002830F9 /* PhotoViewController.swift in Sources */,
 				8E74C1782558867300A169C2 /* SpotReviewTableViewCell.swift in Sources */,
+				8E3D8EE3255CA4B8002830F9 /* Photo.swift in Sources */,
 				8E089A4B2550902C002A4A30 /* APIKeys.swift in Sources */,
 				8E089A4525506862002A4A30 /* Spot.swift in Sources */,
 				8E086F3F254F640E00140DB4 /* SceneDelegate.swift in Sources */,
