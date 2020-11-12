@@ -128,7 +128,7 @@ class SpotDetailViewController: UIViewController {
                 self.cancelBarButton.hide()
                 self.navigationController?.setToolbarHidden(true, animated: true)
                 self.disableTextEditing()
-                if segue.identifier == "AddReview" {
+                if sequeIdentifier == "AddReview" {
                     self.performSegue(withIdentifier: sequeIdentifier, sender: nil)
                 } else {
                     self.cameraOrLibraryAlert()

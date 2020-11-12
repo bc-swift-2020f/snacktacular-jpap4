@@ -45,7 +45,7 @@ class PhotoViewController: UIViewController {
     
     func updateUserInterface() {
         postedByLabel.text = "By \(photo.photoUserEmail)"
-        dateLabel.text = "on: \()"
+        dateLabel.text = "on: \(dateFormatter.string(from: photo.date))"
         dateFormatter.string(from: photo.date)
         descriptionTextView.text = photo.description
         photoImageView.image = photo.image
@@ -56,7 +56,7 @@ class PhotoViewController: UIViewController {
             if photo.photoUserID == Auth.auth().currentUser?.uid {
                 self.navigationItem.leftItemsSupplementBackButton = false
                 saveBarButton.title = "Update"
-                addBordersToEditableOjbects()
+                addBordersToEditableObjects()
                 self.navigationController?.setToolbarHidden(false, animated: true)
             } else {
                 saveBarButton.hide()
