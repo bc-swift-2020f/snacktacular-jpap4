@@ -27,7 +27,7 @@ class Photo {
         self.image = image
         self.description = description
         self.photoUserID = photoUserID
-        self.photoUserID = photoUserEmail
+        self.photoUserEmail = photoUserEmail
         self.date = date
         self.photoURL = photoURL
         self.documentID = documentID
@@ -44,7 +44,7 @@ class Photo {
         let photoUserID = dictionary["photoUserID"] as! String? ?? ""
         let photoUserEmail = dictionary["photoUserEmail"] as! String? ?? ""
         let timeIntervalDate = dictionary["date"] as! TimeInterval? ?? TimeInterval()
-        let date = Date(NSTimeIntervalSince1970: timeIntervalDate)
+        let date = Date(timeIntervalSince1970: timeIntervalDate)
         let photoURL = dictionary["photoURL"] as! String? ?? ""
         self.init(image: UIImage(), description: description, photoUserID: photoUserID, photoUserEmail: photoUserEmail, date: date, photoURL: photoURL, documentID: "")
         }

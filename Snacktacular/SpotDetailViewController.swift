@@ -120,7 +120,7 @@ class SpotDetailViewController: UIViewController {
         }
     }
     
-    func saveCancelAlert(title: String, message: String, sequeIdentifier: String) {
+    func saveCancelAlert(title: String, message: String, segueIdentifier: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let saveAction = UIAlertAction(title: "Save", style: .default) { (_) in
             self.spot.saveData { (sucess) in
@@ -128,8 +128,8 @@ class SpotDetailViewController: UIViewController {
                 self.cancelBarButton.hide()
                 self.navigationController?.setToolbarHidden(true, animated: true)
                 self.disableTextEditing()
-                if sequeIdentifier == "AddReview" {
-                    self.performSegue(withIdentifier: sequeIdentifier, sender: nil)
+                if segueIdentifier == "AddReview" {
+                    self.performSegue(withIdentifier: segueIdentifier, sender: nil)
                 } else {
                     self.cameraOrLibraryAlert()
                 }
@@ -202,7 +202,7 @@ class SpotDetailViewController: UIViewController {
     
     @IBAction func ratingButtonPressed(_ sender: UIButton) {
         if spot.documentID == "" {
-            saveCancelAlert(title: "This venue has not been saved.", message: "You must save this venue before you can review it", sequeIdentifier: "AddReview")
+            saveCancelAlert(title: "This venue has not been saved.", message: "You must save this venue before you can review it", segueIdentifier: "AddReview")
         } else {
             
         }
@@ -212,7 +212,7 @@ class SpotDetailViewController: UIViewController {
     
     @IBAction func photoButtonPressed(_ sender: UIButton) {
         if spot.documentID == "" {
-            saveCancelAlert(title: "This venue has not been saved.", message: "You must save this venue before you can review it", sequeIdentifier: "AddPhoto")
+            saveCancelAlert(title: "This venue has not been saved.", message: "You must save this venue before you can review it", segueIdentifier: "AddPhoto")
         } else {
             cameraOrLibraryAlert()
         }
