@@ -49,7 +49,7 @@ class Review {
         let reviewUserEmail = dictionary["reviewUserEmail"] as! String? ?? ""
         let documentID = dictionary["documentID"] as! String? ?? ""
         self.init(title: title, text: text, rating: rating, reviewUserID: reviewUserID, reviewUserEmail: reviewUserEmail, date: date, documentID: documentID)
-        }
+    }
     
     func saveData(spot: Spot, completion: @escaping (Bool) -> ()) {
         let db = Firestore.firestore()
@@ -63,7 +63,9 @@ class Review {
                 }
                 self.documentID = ref!.documentID
                 print("added document \(self.documentID) to spot: \(spot.documentID)")
-                completion(true)
+                spot.updateAverageRating {
+                    completion(true)
+                }
             }
         } else {
             let ref = db.collection("spots").document(spot.documentID).collection("reviews").document(self.documentID)
@@ -73,7 +75,9 @@ class Review {
                     return completion(false)
                 }
                 print("updated document \(self.documentID) in spot: \(spot.documentID)")
-                completion(true)
+                spot.updateAverageRating {
+                    completion(true)
+                }
             }
         }
     }
@@ -86,9 +90,10 @@ class Review {
                 completion(false)
             } else {
                 print("document deleted")
-                completion(true)
+                spot.updateAverageRating {
+                    completion(true)
+                }
             }
         }
     }
-    
 }
