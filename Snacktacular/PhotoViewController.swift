@@ -41,14 +41,17 @@ class PhotoViewController: UIViewController {
         if photo == nil {
             photo = Photo()
         }
+        updateUserInterface()
     }
     
     func updateUserInterface() {
         postedByLabel.text = "By \(photo.photoUserEmail)"
         dateLabel.text = "on: \(dateFormatter.string(from: photo.date))"
-        dateFormatter.string(from: photo.date)
         descriptionTextView.text = photo.description
         photoImageView.image = photo.image
+        
+        photoImageView.image = photo.image
+
         
         if photo.documentID == "" {
             addBordersToEditableObjects()
@@ -62,12 +65,16 @@ class PhotoViewController: UIViewController {
                 saveBarButton.hide()
                 cancelBarButton.hide()
                 postedByLabel.text = "Posted by: \(photo.photoUserEmail)"
-
                 descriptionTextView.isEditable = false
                 descriptionTextView.backgroundColor = .white
             }
         }
         
+    }
+    
+    func updateFromUserInterface() {
+        photo.description = descriptionTextView.text
+        photo.image = photoImageView.image!
     }
     
     func addBordersToEditableObjects() {
@@ -89,6 +96,13 @@ class PhotoViewController: UIViewController {
         leaveViewController()
     }
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
-        leaveViewController()
+        updateFromUserInterface()
+        photo.saveData(spot: spot) { (success) in
+            if success {
+                self.leaveViewController()
+            } else {
+                print("cannot unwind")
+            }
+        }
     }
 }

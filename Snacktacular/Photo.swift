@@ -47,7 +47,51 @@ class Photo {
         let date = Date(timeIntervalSince1970: timeIntervalDate)
         let photoURL = dictionary["photoURL"] as! String? ?? ""
         self.init(image: UIImage(), description: description, photoUserID: photoUserID, photoUserEmail: photoUserEmail, date: date, photoURL: photoURL, documentID: "")
+    }
+    
+    func saveData(spot: Spot, completion: @escaping (Bool) -> ()) {
+        let db = Firestore.firestore()
+        let storage = Storage.storage()
+        
+        guard let photoData = self.image.jpegData(compressionQuality: 0.5) else {
+            print("error. coult not convert photo image to data")
+            return
         }
-    
-    
+        let uploadMetaData = StorageMetadata()
+        uploadMetaData.contentType = "image/jpeg"
+        
+        if documentID == "" {
+            documentID = UUID().uuidString
+        }
+        
+        let storageRef = storage.reference().child(spot.documentID).child(documentID)
+        
+        let uploadTask = storageRef.putData(photoData, metadata: uploadMetaData) { (metadata, error) in
+            if let error = error {
+                print("Errror upload ref")
+            }
+        }
+        
+        uploadTask.observe(.success) { (snapshot) in
+            print("upload was successful")
+            
+            let dataToSave: [String: Any] = self.dictionary
+            let ref = db.collection("spots").document(spot.documentID).collection("photos").document(self.documentID)
+            ref.setData(dataToSave) { (error) in
+                guard error == nil else {
+                    print("ERROR")
+                    return completion(false)
+                }
+                print("updated document \(self.documentID) in spot: \(spot.documentID)")
+                completion(true)
+            }
+        }
+        
+        uploadTask.observe(.failure) { (snapshot) in
+            if let error = snapshot.error {
+                print("error")
+            }
+            completion(false)
+        }
+    }
 }
