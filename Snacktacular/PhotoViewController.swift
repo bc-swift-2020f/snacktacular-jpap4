@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SDWebImage
 
 private let dateFormatter: DateFormatter = {
     let dateFormatter = DateFormatter()
@@ -49,10 +50,6 @@ class PhotoViewController: UIViewController {
         dateLabel.text = "on: \(dateFormatter.string(from: photo.date))"
         descriptionTextView.text = photo.description
         photoImageView.image = photo.image
-        
-        photoImageView.image = photo.image
-
-        
         if photo.documentID == "" {
             addBordersToEditableObjects()
         } else {
@@ -69,7 +66,13 @@ class PhotoViewController: UIViewController {
                 descriptionTextView.backgroundColor = .white
             }
         }
-        
+        guard let url = URL(string: photo.photoURL) else {
+            photoImageView.image = photo.image
+            return
+        }
+        photoImageView.sd_imageTransition = .fade
+        photoImageView.sd_imageTransition?.duration = 0.5
+        photoImageView.sd_setImage(with: url)
     }
     
     func updateFromUserInterface() {

@@ -75,15 +75,26 @@ class Photo {
         uploadTask.observe(.success) { (snapshot) in
             print("upload was successful")
             
-            let dataToSave: [String: Any] = self.dictionary
-            let ref = db.collection("spots").document(spot.documentID).collection("photos").document(self.documentID)
-            ref.setData(dataToSave) { (error) in
+            storageRef.downloadURL { (url, error) in
                 guard error == nil else {
-                    print("ERROR")
+                    print("error, couldnt create download url")
                     return completion(false)
                 }
-                print("updated document \(self.documentID) in spot: \(spot.documentID)")
-                completion(true)
+                guard let url = url else {
+                    print("error, url was nil")
+                    return completion(false)
+                }
+                self.photoURL = "\(url)"
+                let dataToSave: [String: Any] = self.dictionary
+                let ref = db.collection("spots").document(spot.documentID).collection("photos").document(self.documentID)
+                ref.setData(dataToSave) { (error) in
+                    guard error == nil else {
+                        print("ERROR")
+                        return completion(false)
+                    }
+                    print("updated document \(self.documentID) in spot: \(spot.documentID)")
+                    completion(true)
+                }
             }
         }
         
