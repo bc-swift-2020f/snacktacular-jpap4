@@ -30,6 +30,8 @@
 		8EEBE7BC254F7C1D00BBF8B9 /* SpotListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEBE7BB254F7C1D00BBF8B9 /* SpotListViewController.swift */; };
 		8EEBE7BE254F7DE400BBF8B9 /* SpotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEBE7BD254F7DE400BBF8B9 /* SpotTableViewCell.swift */; };
 		8EEBE7C0254F838D00BBF8B9 /* SpotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEBE7BF254F838D00BBF8B9 /* SpotDetailViewController.swift */; };
+		8EF5982D255F1D67000CCF16 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5982C255F1D67000CCF16 /* Photos.swift */; };
+		8EF59831255F22BA000CCF16 /* SpotPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF59830255F22BA000CCF16 /* SpotPhotoCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		8EEBE7BB254F7C1D00BBF8B9 /* SpotListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotListViewController.swift; sourceTree = "<group>"; };
 		8EEBE7BD254F7DE400BBF8B9 /* SpotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotTableViewCell.swift; sourceTree = "<group>"; };
 		8EEBE7BF254F838D00BBF8B9 /* SpotDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotDetailViewController.swift; sourceTree = "<group>"; };
+		8EF5982C255F1D67000CCF16 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		8EF59830255F22BA000CCF16 /* SpotPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		D4CC490A72A282197770EC6B /* Pods_Snacktacular.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snacktacular.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B3695800C0BC8C0F7E34D8 /* Pods-Snacktacular.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snacktacular.debug.xcconfig"; path = "Target Support Files/Pods-Snacktacular/Pods-Snacktacular.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,11 +114,13 @@
 				8E74C17325586F2300A169C2 /* Review.swift */,
 				8E74C175255874CE00A169C2 /* Reviews.swift */,
 				8E3D8EE2255CA4B8002830F9 /* Photo.swift */,
+				8EF5982C255F1D67000CCF16 /* Photos.swift */,
 				8E086F40254F640E00140DB4 /* LoginViewController.swift */,
 				8EEBE7BB254F7C1D00BBF8B9 /* SpotListViewController.swift */,
 				8EEBE7BD254F7DE400BBF8B9 /* SpotTableViewCell.swift */,
 				8EEBE7BF254F838D00BBF8B9 /* SpotDetailViewController.swift */,
 				8E74C1772558867300A169C2 /* SpotReviewTableViewCell.swift */,
+				8EF59830255F22BA000CCF16 /* SpotPhotoCollectionViewCell.swift */,
 				8E74C171255860EF00A169C2 /* ReviewTableViewController.swift */,
 				8E3D8EE0255C9D2E002830F9 /* PhotoViewController.swift */,
 				8E089A462550731D002A4A30 /* UIViewController+alert.swift */,
@@ -278,6 +284,7 @@
 				8E086F41254F640E00140DB4 /* LoginViewController.swift in Sources */,
 				8E086F3D254F640E00140DB4 /* AppDelegate.swift in Sources */,
 				8EEBE7C0254F838D00BBF8B9 /* SpotDetailViewController.swift in Sources */,
+				8EF5982D255F1D67000CCF16 /* Photos.swift in Sources */,
 				8E74C172255860EF00A169C2 /* ReviewTableViewController.swift in Sources */,
 				8E74C17425586F2300A169C2 /* Review.swift in Sources */,
 				8E089A4925507B19002A4A30 /* Spots.swift in Sources */,
@@ -289,6 +296,7 @@
 				8E089A4B2550902C002A4A30 /* APIKeys.swift in Sources */,
 				8E089A4525506862002A4A30 /* Spot.swift in Sources */,
 				8E086F3F254F640E00140DB4 /* SceneDelegate.swift in Sources */,
+				8EF59831255F22BA000CCF16 /* SpotPhotoCollectionViewCell.swift in Sources */,
 				8E089A472550731D002A4A30 /* UIViewController+alert.swift in Sources */,
 				8E3D8EDD255C8677002830F9 /* UIView+addBorder.swift in Sources */,
 			);

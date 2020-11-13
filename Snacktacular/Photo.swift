@@ -94,4 +94,21 @@ class Photo {
             completion(false)
         }
     }
+    func loadImage(spot: Spot, completion: @escaping (Bool) -> ()) {
+        guard spot.documentID != "" else {
+            print("not a valid spot")
+            return
+        }
+        let storage = Storage.storage()
+        let storageRef = storage.reference().child(spot.documentID).child(documentID)
+        storageRef.getData(maxSize: 25 * 1024 * 10245) { (data, error) in
+            if let error = error {
+                print("error")
+                return completion(false)
+            } else {
+                self.image = UIImage(data: data!) ?? UIImage()
+                return completion(true)
+            }
+        }
+    }
 }
